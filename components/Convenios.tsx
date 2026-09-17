@@ -16,16 +16,16 @@ export function Convenios() {
             href={clinica.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="toque mt-7 inline-flex items-center gap-2.5 rounded-md bg-pine px-5 py-3 font-medium text-paper transition-colors hover:bg-moss"
+            className="toque mt-7 inline-flex items-center gap-2.5 rounded-md bg-vinho px-5 py-3 font-medium text-paper transition-colors hover:bg-rubi"
           >
             <IconeWhatsApp className="h-[1.05rem] w-[1.05rem]" />
             Consultar meu convênio
           </a>
         </div>
 
-        <div className="rounded-lg bg-sage/55 p-7 sm:p-9">
+        <div className="rounded-lg bg-nude/55 p-7 sm:p-9">
           <div>
-            <h3 className="display text-[1.1875rem] text-pine">
+            <h3 className="display text-[1.1875rem] text-vinho">
               {convenios.listaTitulo}
             </h3>
             <ul className="mt-3.5 space-y-2.5">
@@ -37,8 +37,8 @@ export function Convenios() {
             </ul>
           </div>
 
-          <div className="mt-7 border-t border-sage-deep pt-7">
-            <h3 className="display text-[1.1875rem] text-pine">
+          <div className="mt-7 border-t border-nude-forte pt-7">
+            <h3 className="display text-[1.1875rem] text-vinho">
               {convenios.pagamentoTitulo}
             </h3>
             <ul className="mt-3.5 space-y-2.5">
@@ -50,7 +50,7 @@ export function Convenios() {
             </ul>
           </div>
 
-          <p className="mt-7 border-t border-sage-deep pt-7 text-[0.9375rem] leading-relaxed text-ink/70">
+          <p className="mt-7 border-t border-nude-forte pt-7 text-[0.9375rem] leading-relaxed text-ink/70">
             O que o convênio não cobre pode ser feito como particular, na mesma
             consulta. A recepção informa o que entra em cada caso antes de
             começar o tratamento.

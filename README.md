@@ -17,10 +17,10 @@ content/clinica.ts
 Telefone, endereço, textos, lista de tratamentos, perguntas frequentes, horários
 e textos de SEO estão lá. Nenhum texto foi escrito direto dentro dos componentes.
 
-### Os marcadores laranja
+### Os marcadores azuis
 
 Trechos que dependem de informação que a clínica ainda não passou aparecem no
-site com fundo laranja e o texto "a confirmar". No arquivo de conteúdo eles estão
+site marcados em azul, com o texto "a confirmar". No arquivo de conteúdo eles estão
 marcados com `pendente: true`.
 
 Para trocar um deles: substitua o texto e mude `pendente: true` para
@@ -32,6 +32,16 @@ abra `content/clinica.ts` e mude a primeira linha de configuração:
 ```ts
 export const MOSTRAR_MARCADORES = false;
 ```
+
+## Cores
+
+O vermelho e o dourado foram lidos da imagem da logo e ficam no topo de
+`app/globals.css`, em `@theme`. Trocando `--color-rubi`, `--color-vinho` e
+`--color-ouro`, o site inteiro acompanha.
+
+O lettering "QueroSorrir" no cabeçalho e no rodapé é uma **reprodução** da
+logo, feita em texto com degradê dourado (`components/Icones.tsx`, função
+`Marca`). Quando chegar o arquivo original, troque por uma imagem.
 
 ## Fotos
 

@@ -6,7 +6,7 @@
  *  nesta página e salve. Não é preciso mexer em mais nenhum arquivo.
  *
  *  Itens marcados com `pendente: true` aparecem no site com um marcador
- *  laranja de "a confirmar". Depois que o cliente enviar a informação real,
+ *  azul de "a confirmar". Depois que o cliente enviar a informação real,
  *  troque o texto e mude para `pendente: false`.
  *
  *  Para esconder TODOS os marcadores de uma vez (ex.: versão final),
@@ -189,7 +189,7 @@ export const clinica = {
     },
     foto: {
       src: "/fotos/exame.jpg",
-      alt: "Profissional de odontologia examinando os dentes de um paciente com espelho clínico.",
+      alt: "Cirurgião-dentista de jaleco branco conversando e sorrindo com um paciente sentado na cadeira do consultório.",
     },
   },
 
@@ -201,7 +201,7 @@ export const clinica = {
     pendente: true,
     foto: {
       src: "/fotos/consultorio.jpg",
-      alt: "Consultório odontológico com cadeira, equipamento e bancada de apoio.",
+      alt: "Consultório odontológico com duas cadeiras vinho, painel de madeira e armários brancos, iluminado por janela ampla.",
     },
   },
 

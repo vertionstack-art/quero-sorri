@@ -21,7 +21,7 @@ export function Local() {
           <h2 className="display text-title text-balance">Onde fica a clínica</h2>
 
           <div className="mt-7 flex gap-3.5">
-            <IconeLocal className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-moss" />
+            <IconeLocal className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-rubi" />
             <address className="text-[1.0625rem] not-italic leading-relaxed">
               {endereco.linha1}
               <br />
@@ -32,9 +32,9 @@ export function Local() {
           </div>
 
           <div className="mt-7 flex gap-3.5">
-            <IconeRelogio className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-moss" />
+            <IconeRelogio className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 text-rubi" />
             <div>
-              <h3 className="text-[0.9375rem] font-semibold text-pine">
+              <h3 className="text-[0.9375rem] font-semibold text-vinho">
                 Horário de atendimento
               </h3>
               <dl className="mt-2.5 space-y-1.5">
@@ -55,7 +55,7 @@ export function Local() {
               href={clinica.rotaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="toque inline-flex items-center rounded-md bg-pine px-5 py-3 font-medium text-paper transition-colors hover:bg-moss"
+              className="toque inline-flex items-center rounded-md bg-vinho px-5 py-3 font-medium text-paper transition-colors hover:bg-rubi"
             >
               Traçar rota
             </a>
@@ -63,14 +63,14 @@ export function Local() {
               href={clinica.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="toque inline-flex items-center rounded-md border border-line px-5 py-3 font-medium transition-colors hover:border-moss hover:text-pine"
+              className="toque inline-flex items-center rounded-md border border-line px-5 py-3 font-medium transition-colors hover:border-rubi hover:text-vinho"
             >
               Ver no Google Maps
             </a>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-lg border border-line bg-sage/40">
+        <div className="overflow-hidden rounded-lg border border-line bg-nude/40">
           <iframe
             src={mapaSrc}
             title={`Mapa com a localização da ${clinica.nome} em ${endereco.cidade}`}
@@ -92,7 +92,7 @@ export function Local() {
           />
         </div>
         <figcaption className="mt-4 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-          <span className="display text-[1.1875rem] text-pine">
+          <span className="display text-[1.1875rem] text-vinho">
             {estrutura.titulo}
           </span>
           <span className="medida-larga text-[0.9375rem] text-ink/65">

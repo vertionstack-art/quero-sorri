@@ -27,7 +27,7 @@ export function Tratamentos() {
               key={item.nome}
               className="grid gap-1 border-b border-line py-5 sm:grid-cols-[13.5rem_1fr] sm:gap-6 sm:py-6"
             >
-              <h3 className="display text-[1.1875rem] leading-snug text-pine">
+              <h3 className="display text-[1.1875rem] leading-snug text-vinho">
                 {item.nome}
               </h3>
               <p className="text-[1rem] leading-relaxed text-ink/75">{item.texto}</p>

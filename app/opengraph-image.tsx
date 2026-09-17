@@ -15,8 +15,8 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0b4038",
-          color: "#f2f4f1",
+          background: "#96060f",
+          color: "#f8f6f5",
           padding: "68px 72px",
           fontFamily: "Georgia, serif",
         }}
@@ -27,19 +27,21 @@ export default function OpenGraphImage() {
               width: 56,
               height: 56,
               borderRadius: 16,
-              background: "#f2f4f1",
+              background: "#d9ae52",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#0b4038",
+              color: "#96060f",
               fontSize: 34,
             }}
           >
             ⌣
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontSize: 30, letterSpacing: -0.5 }}>{clinica.nome}</span>
-            <span style={{ fontSize: 19, color: "#bdd2c9" }}>
+            <span style={{ fontSize: 32, letterSpacing: -0.5, color: "#d9ae52" }}>
+              {clinica.nome}
+            </span>
+            <span style={{ fontSize: 19, color: "#f0d2cf" }}>
               Gurupi, Tocantins
             </span>
           </div>
@@ -49,8 +51,8 @@ export default function OpenGraphImage() {
           <span style={{ fontSize: 68, lineHeight: 1.06, letterSpacing: -1.6 }}>
             {clinica.hero.titulo}
           </span>
-          <span style={{ fontSize: 27, color: "#bdd2c9", maxWidth: 900 }}>
-            {clinica.endereco.linha1} · {clinica.endereco.bairro} ·{" "}
+          <span style={{ fontSize: 27, color: "#f0d2cf", maxWidth: 900 }}>
+            {clinica.endereco.linha1} — {clinica.endereco.bairro} —{" "}
             {clinica.telefoneExibicao}
           </span>
         </div>
@@ -60,13 +62,13 @@ export default function OpenGraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 14,
-            borderTop: "1px solid #234b43",
+            borderTop: "1px solid #a97f35",
             paddingTop: 26,
             fontSize: 24,
-            color: "#bdd2c9",
+            color: "#f0d2cf",
           }}
         >
-          <span style={{ color: "#d99a0b" }}>★★★★★</span>
+          <span style={{ color: "#d9ae52" }}>★★★★★</span>
           <span>
             {clinica.google.nota.toLocaleString("pt-BR")} de média em{" "}
             {clinica.google.avaliacoes} avaliações no Google

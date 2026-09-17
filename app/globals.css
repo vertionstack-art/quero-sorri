@@ -3,22 +3,32 @@
 @source "../app/**/*.{ts,tsx}";
 @source "../components/**/*.{ts,tsx}";
 
+/* ===========================================================================
+   CORES DA CLÍNICA — tiradas da logo (vermelho com o nome em dourado)
+   ---------------------------------------------------------------------------
+   Os valores abaixo foram lidos da imagem da logo. Se você tiver o arquivo
+   original com os códigos exatos, troque aqui e o site inteiro acompanha.
+   =========================================================================== */
 @theme {
-  /* Verde profundo: clínico sem ser o azul-de-posto-de-saúde padrão. */
-  --color-ink: #10231e;
-  --color-pine: #0b4038;
-  --color-pine-deep: #06251f;
-  --color-moss: #135f51;
-  --color-moss-soft: #1d7b69;
-  --color-sage: #dce7e1;
-  --color-sage-deep: #bdd2c9;
-  --color-paper: #f2f4f1;
-  --color-line: #d2dad5;
-  --color-line-dark: #234b43;
-  /* Dourado: usado só nas estrelas da nota do Google. */
-  --color-gold: #d99a0b;
-  /* Laranja: usado só no marcador de "informação a confirmar". */
-  --color-pend: #a75410;
+  --color-rubi: #cc0a14; /* vermelho da logo: botões e acentos */
+  --color-vinho: #96060f; /* painéis grandes: cabeçalho, topo, rodapé de ação */
+  --color-vinho-fundo: #6e040b; /* faixa de dados abaixo do topo */
+
+  --color-ouro: #d9ae52; /* dourado da logo */
+  --color-ouro-claro: #f2dda2; /* brilho do degradê da logo */
+  --color-ouro-escuro: #96741f; /* dourado legível sobre fundo claro */
+
+  --color-ink: #26171a; /* texto */
+  --color-paper: #f8f6f5; /* fundo da página */
+  --color-nude: #f7e6e4; /* seções de respiro e texto sobre vinho */
+  --color-nude-forte: #e6cbc8; /* divisórias dentro das seções de respiro */
+  --color-line: #e3dcdb; /* divisórias sobre o fundo claro */
+  --color-linha-inv: #a97f35; /* fio dourado sobre os painéis vinho */
+
+  /* Azul: usado só no marcador de "informação a confirmar".
+     É de propósito uma cor de fora da paleta, para nunca ser confundida
+     com um elemento da marca. */
+  --color-pend: #1c5e8f;
 
   --font-display: var(--font-petrona), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-archivo), system-ui, -apple-system, sans-serif;
@@ -61,13 +71,13 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-pine);
+  background-color: var(--color-vinho);
   color: var(--color-paper);
 }
 
-/* Foco sempre visível, inclusive sobre o painel verde. */
+/* Foco sempre visível, inclusive sobre os painéis vinho. */
 :where(a, button, summary, [tabindex]):focus-visible {
-  outline: 3px solid var(--color-gold);
+  outline: 3px solid var(--color-ouro);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -79,7 +89,7 @@ body {
   font-optical-sizing: auto;
 }
 
-/* Linha de medida confortável para leitura em serifada e em sans. */
+/* Linha de medida confortável para leitura. */
 .medida {
   max-width: 34rem;
 }
@@ -104,9 +114,9 @@ body {
   font-style: normal;
 }
 .pendente-escuro {
-  color: #f2b169;
-  background-color: rgba(242, 177, 105, 0.13);
-  box-shadow: inset 0 -1px 0 0 rgba(242, 177, 105, 0.45);
+  color: #a8d4f2;
+  background-color: rgba(168, 212, 242, 0.14);
+  box-shadow: inset 0 -1px 0 0 rgba(168, 212, 242, 0.5);
 }
 
 details > summary {
@@ -143,4 +153,23 @@ details > summary::-webkit-details-marker {
 }
 .assenta {
   animation: assenta 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Reprodução do lettering dourado da logo, para a prévia.
+   Substituir pelo arquivo original assim que a clínica enviar. */
+.ouro-degrade {
+  color: var(--color-ouro);
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .ouro-degrade {
+    background-image: linear-gradient(
+      177deg,
+      var(--color-ouro-claro) 4%,
+      var(--color-ouro) 46%,
+      #a87f2e 96%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }

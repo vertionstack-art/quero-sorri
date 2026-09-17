@@ -9,9 +9,8 @@ export function Rodape() {
       <div className="mx-auto max-w-6xl px-5 pt-14 pb-28 lg:px-8 lg:pb-20">
         <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2.5 text-pine">
-              <Marca className="h-9 w-9" />
-              <span className="display text-[1.0625rem] text-ink">{clinica.nome}</span>
+            <div className="inline-flex rounded-md bg-vinho px-4 py-3">
+              <Marca />
             </div>
             <p className="medida mt-4 text-[0.9375rem] leading-relaxed text-ink/70">
               {rodape.aviso}
@@ -19,12 +18,12 @@ export function Rodape() {
           </div>
 
           <div>
-            <h2 className="text-[0.9375rem] font-semibold text-pine">Contato</h2>
+            <h2 className="text-[0.9375rem] font-semibold text-vinho">Contato</h2>
             <ul className="mt-3 space-y-2 text-[0.9375rem]">
               <li>
                 <a
                   href={clinica.telefoneLink}
-                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-pine hover:decoration-moss"
+                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-vinho hover:decoration-rubi"
                 >
                   {clinica.telefoneExibicao}
                 </a>
@@ -34,7 +33,7 @@ export function Rodape() {
                   href={clinica.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-pine hover:decoration-moss"
+                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-vinho hover:decoration-rubi"
                 >
                   WhatsApp
                 </a>
@@ -44,7 +43,7 @@ export function Rodape() {
                   href={clinica.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-pine hover:decoration-moss"
+                  className="toque inline-flex items-center text-ink/80 underline decoration-line underline-offset-4 hover:text-vinho hover:decoration-rubi"
                 >
                   Ficha no Google Maps
                 </a>
@@ -53,7 +52,7 @@ export function Rodape() {
           </div>
 
           <div>
-            <h2 className="text-[0.9375rem] font-semibold text-pine">Endereço</h2>
+            <h2 className="text-[0.9375rem] font-semibold text-vinho">Endereço</h2>
             <address className="mt-3 text-[0.9375rem] not-italic leading-relaxed text-ink/80">
               {endereco.linha1}
               <br />
@@ -74,7 +73,7 @@ export function Rodape() {
               href={rodape.autorUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-pine underline decoration-line underline-offset-4 hover:decoration-moss"
+              className="font-medium text-vinho underline decoration-line underline-offset-4 hover:decoration-rubi"
             >
               {rodape.autor}
             </a>
@@ -83,8 +82,8 @@ export function Rodape() {
 
         {MOSTRAR_MARCADORES && (
           <p className="mt-8 rounded-md border border-pend/30 bg-pend/6 px-4 py-3 text-[0.875rem] leading-relaxed text-pend">
-            <strong className="font-semibold">Prévia.</strong> Os trechos com
-            fundo laranja são campos que ainda dependem da informação real da
+            <strong className="font-semibold">Prévia.</strong> Os trechos
+            marcados em azul são campos que ainda dependem da informação real da
             clínica. As fotos são de banco de imagens. Nenhum dado de
             atendimento, preço ou horário foi inventado: onde não havia
             informação, ficou o marcador.

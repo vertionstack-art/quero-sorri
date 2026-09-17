@@ -34,7 +34,7 @@ export function AvisoPendente({
       className={[
         "mt-5 flex items-start gap-2.5 border-l-2 py-1 pl-3 text-[0.9375rem] leading-relaxed",
         escuro
-          ? "border-[#f2b169]/60 text-[#f2b169]"
+          ? "border-[#a8d4f2]/60 text-[#a8d4f2]"
           : "border-pend/50 text-pend",
       ].join(" ")}
     >

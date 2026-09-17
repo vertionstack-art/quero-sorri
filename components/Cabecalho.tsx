@@ -11,20 +11,14 @@ const secoes = [
 
 export function Cabecalho() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/92 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 bg-vinho text-paper shadow-[0_1px_0_0_var(--color-linha-inv)]">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-5 sm:h-[4.5rem] lg:px-8">
         <a
           href="#topo"
-          className="toque flex items-center gap-2.5 text-pine"
+          className="toque flex items-center"
           aria-label={`${clinica.nome} — início`}
         >
-          <Marca className="h-9 w-9 shrink-0" />
-          <span className="display text-[1.0625rem] leading-none text-ink">
-            Quero Sorrir
-            <span className="mt-1 block font-sans text-[0.6875rem] font-medium text-moss">
-              Clínica odontológica em Gurupi
-            </span>
-          </span>
+          <Marca />
         </a>
 
         <nav aria-label="Seções do site" className="ml-auto hidden lg:block">
@@ -33,7 +27,7 @@ export function Cabecalho() {
               <li key={s.href}>
                 <a
                   href={s.href}
-                  className="toque flex items-center rounded px-3 text-[0.9375rem] text-ink/75 transition-colors hover:text-pine"
+                  className="toque flex items-center rounded px-3 text-[0.9375rem] text-nude/85 transition-colors hover:text-ouro"
                 >
                   {s.rotulo}
                 </a>
@@ -45,16 +39,16 @@ export function Cabecalho() {
         <div className="ml-auto flex items-center gap-2 lg:ml-4">
           <a
             href={clinica.telefoneLink}
-            className="toque hidden items-center gap-2 rounded-md border border-line px-3.5 text-[0.9375rem] font-medium text-ink transition-colors hover:border-moss hover:text-pine sm:flex"
+            className="toque hidden items-center gap-2 rounded-md border border-linha-inv px-3.5 text-[0.9375rem] font-medium text-nude transition-colors hover:border-ouro hover:text-ouro sm:flex"
           >
-            <IconeTelefone className="h-[1.05rem] w-[1.05rem] text-moss" />
+            <IconeTelefone className="h-[1.05rem] w-[1.05rem]" />
             {clinica.telefoneExibicao}
           </a>
           <a
             href={clinica.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="toque flex items-center gap-2 rounded-md bg-pine px-4 text-[0.9375rem] font-medium text-paper transition-colors hover:bg-moss"
+            className="toque flex items-center gap-2 rounded-md bg-paper px-4 text-[0.9375rem] font-semibold text-vinho transition-colors hover:bg-ouro-claro"
           >
             <IconeWhatsApp className="h-[1.05rem] w-[1.05rem]" />
             Agendar

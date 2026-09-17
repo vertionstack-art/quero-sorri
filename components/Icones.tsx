@@ -85,20 +85,47 @@ export function IconeMais({ className = "h-4 w-4" }: Props) {
   );
 }
 
-/** Marca da clínica: arco de sorriso. Substituir pelo logo real do cliente. */
-export function Marca({ className = "h-9 w-9" }: Props) {
+/** Dente estilizado do logotipo, em dourado. */
+export function MarcaDente({ className = "h-7 w-7" }: Props) {
   return (
-    <svg viewBox="0 0 40 40" aria-hidden="true" className={className}>
-      <rect width="40" height="40" rx="11" fill="currentColor" />
+    <svg viewBox="0 0 48 48" aria-hidden="true" className={className}>
+      <defs>
+        <linearGradient id="ouroDente" x1="0" y1="0" x2="0.25" y2="1">
+          <stop offset="0%" stopColor="#F2DDA2" />
+          <stop offset="46%" stopColor="#D9AE52" />
+          <stop offset="100%" stopColor="#A87F2E" />
+        </linearGradient>
+      </defs>
       <path
-        d="M11 17.5c0 6 4 9.5 9 9.5s9-3.5 9-9.5"
-        fill="none"
-        stroke="#F2F4F1"
-        strokeWidth="2.6"
-        strokeLinecap="round"
+        fill="url(#ouroDente)"
+        d="M24 6c3.4 0 4.6-1.6 8.4-1.6 5.6 0 9.6 4 9.6 10.2 0 5-1.5 8.4-2.7 13.2-1 4-1.6 8-2.4 11.2-.7 2.9-1.8 4.6-3.6 4.6-2.2 0-3.1-2.2-3.8-5.6-.8-3.8-1.4-8.4-3.1-10.6-.7-.9-1.5-1.3-2.4-1.3s-1.7.4-2.4 1.3c-1.7 2.2-2.3 6.8-3.1 10.6-.7 3.4-1.6 5.6-3.8 5.6-1.8 0-2.9-1.7-3.6-4.6-.8-3.2-1.4-7.2-2.4-11.2C7.5 23 6 19.6 6 14.6 6 8.4 10 4.4 15.6 4.4 19.4 4.4 20.6 6 24 6Z"
       />
-      <circle cx="14.6" cy="13.4" r="1.9" fill="#F2F4F1" />
-      <circle cx="25.4" cy="13.4" r="1.9" fill="#F2F4F1" />
     </svg>
+  );
+}
+
+/**
+ * Lockup da marca: reprodução aproximada do logotipo da clínica
+ * (nome em dourado degradê sobre vermelho) para uso nesta prévia.
+ * Trocar pelo arquivo original assim que a clínica enviar.
+ */
+export function Marca({
+  className = "",
+  compacto = false,
+}: Props & { compacto?: boolean }) {
+  return (
+    <span className={`flex items-center gap-2 ${className}`}>
+      <span className="leading-none">
+        <span className="ouro-degrade block text-[1.3125rem] leading-none font-semibold tracking-[-0.015em] whitespace-nowrap">
+          Quero<span className="font-extrabold">Sorrir</span>
+        </span>
+        {!compacto && (
+          <span className="mt-0.5 block text-[0.625rem] font-medium tracking-[0.26em] text-ouro/85 uppercase">
+            Odontologia
+          </span>
+        )}
+      </span>
+      <MarcaDente className="h-7 w-7 shrink-0" />
+    </span>
   );
 }

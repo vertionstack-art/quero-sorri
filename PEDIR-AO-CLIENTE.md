@@ -1,7 +1,7 @@
 # O que pedir à Clínica Quero Sorrir
 
 Lista do que falta para o site sair da prévia. Cada item abaixo corresponde a um
-marcador laranja no site. O campo entre parênteses é onde ele fica em
+marcador azul no site. O campo entre parênteses é onde ele fica em
 `content/clinica.ts`.
 
 ## Essencial (sem isso o site não vai ao ar)
@@ -31,12 +31,17 @@ marcador laranja no site. O campo entre parênteses é onde ele fica em
 
 ## Fotos e identidade
 
-11. **Logotipo** em arquivo vetorial (`.svg`, `.ai` ou `.pdf`) ou PNG com fundo
-    transparente, em alta. Hoje o site usa uma marca provisória feita por nós.
+11. **Logotipo em arquivo** (`.svg`, `.ai`, `.pdf` ou PNG em alta com fundo
+    transparente). Hoje o site usa uma **reprodução** do lettering dourado
+    feita por nós a partir da imagem da logo; a versão final precisa do
+    arquivo original. Peça junto os **códigos das cores** (o vermelho e o
+    dourado) — enquanto isso, os valores usados foram lidos da imagem e ficam
+    em `app/globals.css`, no bloco do topo.
 12. **Fotos reais**: fachada, recepção, um consultório, e a equipe. De
     preferência em horizontal, com boa luz, sem paciente identificável (ou com
     autorização de uso de imagem assinada).
-13. **Cores da marca**, se a clínica já tiver.
+13. **Fotos com o vermelho da marca em cena** (recepção, fachada, jaleco da
+    equipe) valorizam muito mais do que foto genérica de banco de imagens.
 
 ## Depois
 
@@ -45,9 +50,22 @@ marcador laranja no site. O campo entre parênteses é onde ele fica em
 15. **E-mail de contato**, se quiserem exibir.
 16. **Redes sociais** (Instagram, Facebook), para linkar no rodapé.
 
-## Ponto para conferir com o cliente
+## Pontos que precisam ser resolvidos antes de mostrar ao dono
 
-- O telefone informado é **(77) 99823-8810**. O DDD de Gurupi e de todo o
-  Tocantins é **63**; o 77 é da Bahia. O número foi usado exatamente como veio
-  da ficha, mas vale confirmar antes de mandar o link para o dono — se estiver
-  errado, o botão de WhatsApp leva para outro lugar.
+### É Gurupi-TO ou Barreiras-BA?
+
+Os dados que temos se contradizem:
+
+| Sinal | Aponta para |
+| --- | --- |
+| Endereço e ficha do Google Maps | Av. Goiás, 1997 — Setor União I, **Gurupi/TO** |
+| Texto dentro da logo | **Barreiras-Ba** |
+| DDD do telefone, (77) | **Barreiras/BA** (o DDD de todo o Tocantins é 63) |
+
+Duas explicações possíveis: a clínica tem unidades nas duas cidades e a logo é
+a da unidade da Bahia, ou a logo veio do perfil de outra unidade.
+
+O site inteiro está montado para **Gurupi/TO**, porque é o que a ficha do Maps
+diz — cidade, endereço, mapa, coordenadas, dados estruturados e palavras-chave
+de busca. Se a unidade certa for Barreiras, tudo isso muda; é troca de meia
+hora, mas precisa ser decidida antes de o link ir para o dono.
