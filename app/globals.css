@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+
+@theme {
+  /* Verde profundo: clínico sem ser o azul-de-posto-de-saúde padrão. */
+  --color-ink: #10231e;
+  --color-pine: #0b4038;
+  --color-pine-deep: #06251f;
+  --color-moss: #135f51;
+  --color-moss-soft: #1d7b69;
+  --color-sage: #dce7e1;
+  --color-sage-deep: #bdd2c9;
+  --color-paper: #f2f4f1;
+  --color-line: #d2dad5;
+  --color-line-dark: #234b43;
+  /* Dourado: usado só nas estrelas da nota do Google. */
+  --color-gold: #d99a0b;
+  /* Laranja: usado só no marcador de "informação a confirmar". */
+  --color-pend: #a75410;
+
+  --font-display: var(--font-petrona), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-archivo), system-ui, -apple-system, sans-serif;
+
+  --text-display: clamp(2.375rem, 1.55rem + 3.4vw, 4.125rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.021em;
+
+  --text-title: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem);
+  --text-title--line-height: 1.12;
+  --text-title--letter-spacing: -0.016em;
+
+  --text-sub: clamp(1.125rem, 1.03rem + 0.4vw, 1.3125rem);
+  --text-sub--line-height: 1.5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+::selection {
+  background-color: var(--color-pine);
+  color: var(--color-paper);
+}
+
+/* Foco sempre visível, inclusive sobre o painel verde. */
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Os títulos carregam a personalidade; o corpo fica neutro. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-optical-sizing: auto;
+}
+
+/* Linha de medida confortável para leitura em serifada e em sans. */
+.medida {
+  max-width: 34rem;
+}
+.medida-larga {
+  max-width: 46rem;
+}
+
+/* Alvo de toque mínimo de 44px em qualquer coisa clicável. */
+.toque {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Marcador de informação pendente de confirmação com o cliente. */
+.pendente {
+  color: var(--color-pend);
+  background-color: color-mix(in srgb, var(--color-pend) 9%, transparent);
+  box-shadow: inset 0 -1px 0 0 color-mix(in srgb, var(--color-pend) 45%, transparent);
+  padding-inline: 0.28em;
+  padding-block: 0.06em;
+  border-radius: 2px;
+  font-style: normal;
+}
+.pendente-escuro {
+  color: #f2b169;
+  background-color: rgba(242, 177, 105, 0.13);
+  box-shadow: inset 0 -1px 0 0 rgba(242, 177, 105, 0.45);
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Única entrada animada da página: o painel do topo assenta ao carregar. */
+@keyframes assenta {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.assenta {
+  animation: assenta 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
