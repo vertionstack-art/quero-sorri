@@ -253,7 +253,7 @@ export const clinica = {
     aviso:
       "Este site tem caráter informativo e não substitui a consulta com cirurgião-dentista. O resultado de qualquer tratamento varia de pessoa para pessoa.",
     autor: "Vertion Stack",
-    autorUrl: "https://vertionstack.com.br",
+    autorUrl: "https://vertionstack.com",
   },
 
   // --- SEO -----------------------------------------------------------------
