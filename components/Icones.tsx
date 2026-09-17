@@ -120,7 +120,7 @@ export function Marca({
           Quero<span className="font-extrabold">Sorrir</span>
         </span>
         {!compacto && (
-          <span className="mt-0.5 block text-[0.625rem] font-medium tracking-[0.26em] text-ouro/85 uppercase">
+          <span className="mt-0.5 block text-[0.6875rem] font-medium tracking-[0.17em] text-ouro">
             Odontologia
           </span>
         )}
